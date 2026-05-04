@@ -134,4 +134,48 @@ Do your work on this branch (add files, make commits). When you are done, push i
 - Write a short description of what you did
 - Click "Create pull request"
 
- ![Github yellow notification](screenshots/yellow_notification.png)
+![Github yellow notification](screenshots/yellow_notification.png)
+
+![Github first pull request](screenshots/first_pr.png)
+
+#### Step 14 — Merge the Pull Request
+Once your teammate approves (or if you are working alone):
+- Click "Merge pull request"
+- Click "Confirm merge"
+![Merge Pull Request](screenshots/merge_pull_request.png)
+
+
+### Part 7 — Git for Data Science specifically
+The .gitignore file -  what NOT to track
+Some files should never go into Git:
+
+- Large datasets (.csv, .parquet) — too big, slow everything down
+- Model files (.pkl, .h5) — can be hundreds of MB
+- Secret keys and passwords (.env)
+- Temporary files (__pycache__/, .ipynb_checkpoints/)
+The .gitignore file tells Git to ignore these automatically.
+
+#### Step 15 — View your .gitignore
+Open .gitignore in VS Code or any text editor. Since you chose "Python" when creating the repo, it already ignores common Python files. Add data science specific entries:
+- Add these lines to your .gitignore
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.pkl
+models/
+.env
+
+### Part 8 — Fixing mistakes
+**Accidentally changed a file**
+``git checkout -- filename`` - Restores the file to last commit
+**Staged a file by mistake** 
+``git reset HEAD filename`` - Unstages it (but keeps your changes)
+**Bad commit message**
+``git commit --amend -m "Better message"`` - Rewrites the last commit message
+**Need to undo last commit** 
+``git reset --soft HEAD~1`` - Undoes commit but keeps your files
+**Want to save work temporarily**
+``git stash`` - Hides your changes for later
+**Get your stashed work back** 
+``git stash pop`` - Brings back hidden changes
