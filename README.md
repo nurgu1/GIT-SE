@@ -167,11 +167,11 @@ models/
 .env
 
 ### Part 8 — Fixing mistakes
-**Accidentally changed a file**
+**Accidentally changed a file** <br>
 ``git checkout -- filename`` - Restores the file to last commit
-**Staged a file by mistake** 
+**Staged a file by mistake**  <br>
 ``git reset HEAD filename`` - Unstages it (but keeps your changes)
-**Bad commit message**
+**Bad commit message** 
 ``git commit --amend -m "Better message"`` - Rewrites the last commit message
 **Need to undo last commit** 
 ``git reset --soft HEAD~1`` - Undoes commit but keeps your files
