@@ -112,8 +112,26 @@ bash
 Now go to your GitHub repo page and refresh so your file will be there! 
 
 ### Part 5 — Working with branches
+A branch lets you work on new ideas without touching the main project. Think of it as a safe sandbox.
+**Rule #1: Never work directly on the main branch.**
+#### Step 11 — Create and switch to a new branch
+bash
+``git checkout -b feature/logistic-regression``
+
+This creates a new branch AND switches to it in one command.
+ ![Terminal showing successful git new branch creation](screenshots/git_new_branch.png)
+
+Do your work on this branch (add files, make commits). When you are done, push it:
+``git push origin feature/logistic-regression``
 
 
+### Part 6 - Collaborating on GitHub (Pull Requests)
+**A Pull Request (PR)** is how you ask your teammates to review your work before merging it into the main project.
+#### Step 13 — Open a Pull Request
+- Go to your repo on GitHub
+- You will see a yellow banner: "feature/logistic-regression had recent pushes"
+- Click "Compare & pull request"
+- Write a short description of what you did
+- Click "Create pull request"
 
-
-
+ ![Github yellow notification](screenshots/yellow_notification.png)
